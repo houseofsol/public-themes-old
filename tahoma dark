@@ -1876,10 +1876,9 @@ pre {
  <div id="headernav">
  <h3>muses // verses</h3>
 <ul id="tabs">
-     <li class="active"style="width:200px">from my mind</li>
+      <li class="active"style="width:200px">from my mind</li> &nbsp;
      <li style="width:200px">from the page</li>
-     
-     <li style="width:200px">base canon</li>
+     <li style="width:200px">base canon</li> &nbsp;
      <li style="width:200px">fandom inspired</li>
 </ul>  
 
