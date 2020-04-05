@@ -8,7 +8,9 @@
 
 <!--
  
-tahoma light ver. 1.0 by houseofsol with a base code by neonbike themes. 
+tahoma light ver. 1.2 by houseofsol with a base code by neonbike themes. this theme does not have the tabbed muse/verse pages
+and is consistent with previous themes in terms of organisation.
+
 please do not remove this credit and please do not use this theme for commissions or giveaways. 
 thank you.
  
@@ -2797,10 +2799,10 @@ $(document).ready(function() {
 
 <div id="02" class="popup_block">
 <ul id="poptabs">
-     <li class="active" style="width:110px">section one</li>&nbsp;
-	  <li style="width:110px">section two</li>
-     <li style="width:110px">section three</li>&nbsp;
-     <li style="width:110px">section four</li>
+     <li class="active" style="width:108px">section one</li>&nbsp;
+	  <li style="width:108px">section two</li>&nbsp;
+     <li style="width:108px">section three</li>&nbsp;
+     <li style="width:108px">section four</li>
 </ul>  
 
 <ul id="poptab">
