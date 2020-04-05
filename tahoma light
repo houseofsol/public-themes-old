@@ -8,8 +8,7 @@
 
 <!--
  
-tahoma light ver. 1.2 by houseofsol with a base code by neonbike themes. this theme does not have the tabbed muse/verse pages
-and is consistent with previous themes in terms of organisation.
+tahoma light ver. 1.0 by houseofsol with a base code by neonbike themes. 
 
 please do not remove this credit and please do not use this theme for commissions or giveaways. 
 thank you.
@@ -1878,10 +1877,9 @@ pre {
  <div id="headernav">
  <h3>muses // verses</h3>
 <ul id="tabs">
-     <li class="active"style="width:200px">from my mind</li>
+     <li class="active"style="width:200px">from my mind</li> &nbsp;
      <li style="width:200px">from the page</li>
-     
-     <li style="width:200px">base canon</li>
+     <li style="width:200px">base canon</li> &nbsp;
      <li style="width:200px">fandom inspired</li>
 </ul>  
 
