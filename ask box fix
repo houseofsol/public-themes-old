@@ -1,0 +1,11 @@
+for those who use my themes found here or the one theme i still have left on pastebin, i've finally found a fix to the ask box problem. 
+when you click on ask on the dash it will take you to the /ask page but the ask box is just a sliver of itself. this will fix that problem and allow those who want
+to send you asks from the dash to do so.
+
+this code needs to go in the css of your theme. i've been putting it above the cursor code, but it should work no matter where you put it.
+
+iframe#ask_form { 
+      width: 455px;
+      height: 230px;
+      min-height: 220px; 
+      }
