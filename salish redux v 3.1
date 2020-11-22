@@ -1,0 +1,1618 @@
+<html>
+    <head>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        
+
+<!--
+ 
+salish v. 3.1 by houseofsol using a tutorial by octomoosey & integrating a base code by neonbike themes
+ 
+please do not remove this credit and please do not use this theme for commissions or giveaways. 
+thank you.
+
+https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4 -- use this to change the transparency of the backgrounds
+ 
+-->
+
+<!-- popup script -->
+<script type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+<!-- end script -->
+
+
+<!-- tabbed script -->
+
+<script>
+
+$(document).ready(function(){
+    $("ul#tabs li").click(function(e){
+        if (!$(this).hasClass("active")) {
+            var tabNum = $(this).index();
+            var nthChild = tabNum+1;
+            $("ul#tabs li.active").removeClass("active");
+            $(this).addClass("active");
+            $("ul#tab li.active").removeClass("active");
+            $("ul#tab li:nth-child("+nthChild+")").addClass("active");
+        }
+    });
+});
+
+</script>
+
+<!-- end tabbed script -->
+
+
+<!-- tabbed popup script -->
+
+<script>
+
+$(document).ready(function(){
+    $("ul#poptabs li").click(function(e){
+        if (!$(this).hasClass("active")) {
+            var tabNum = $(this).index();
+            var nthChild = tabNum+1;
+            $("ul#poptabs li.active").removeClass("active");
+            $(this).addClass("active");
+            $("ul#poptab li.active").removeClass("active");
+            $("ul#poptab li:nth-child("+nthChild+")").addClass("active");
+        }
+    });
+});
+
+</script>
+
+<!-- end tabbed script -->
+
+<!-- tabbed script -->
+
+    <script>
+
+    $(document).ready(function(){
+    $("ul#mvtabs li").click(function(e){
+        if (!$(this).hasClass("active")) {
+            var tabNum = $(this).index();
+            var nthChild = tabNum+1;
+            $("ul#mvtabs li.active").removeClass("active");
+            $(this).addClass("active");
+            $("ul#mvtab li.active").removeClass("active");
+            $("ul#mvtab li:nth-child("+nthChild+")").addClass("active");
+        }
+    });
+});
+
+    </script>
+
+<!-- end tabbed script -->
+
+
+<!-- important scripts -->
+<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+<script src="https://static.tumblr.com/wgijwsy/Ebfm2v4gy/jquery.masonry.min.js"></script>
+
+
+<!-- end other script -->
+
+<!-- mytooltips script -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+
+<script>
+
+(function($){
+
+$(document).ready(function(){
+
+$("a[title]").style_my_tooltips({
+
+tip_follows_cursor:true,
+
+tip_delay_time:0,
+
+tip_fade_speed:0,
+
+attribute:"title"
+
+});
+
+});
+
+})(jQuery);
+
+</script>
+
+<!-- end mytooltips script -->
+        
+        <script src="https://kit.fontawesome.com/2e587cc233.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+        
+
+    
+    
+ <!-- colour variables (this is where you change the colours) -->
+ 
+   <meta name="color:background" content="#0a0a0a"/>
+	<meta name="color:text" content="#ffffff"/>
+	<meta name="color:links" content="#577399"/>
+	<meta name="color:links hover" content="#778899"/>
+	<meta name="color:permalinks" content="#577399"/>
+	<meta name="color:permalinks hover" content="#778899"/>
+	<meta name="color:bold" content="#556677"/>
+	<meta name="color:italics" content="#fe5f55"/>
+	<meta name="color:blockquote" content="#bdd5ea"/>
+	<meta name="color:pagination" content="#577399"/>
+	<meta name="color:pagination hover" content="#778899"/>
+	<meta name="color:name" content="#ffffff"/>
+	<meta name="color:sidebox" content="#ffffff"/>
+	<meta name="color:popup background" content="#191919"/>
+	<meta name="color:popup text" content="#fdfcfa"/>
+	<meta name="color:popup tabs active" content="#0f0f0f"/>
+	<meta name="color:verse muse tabs" content="#ffffff"/>
+	<meta name="color:verse muse tabs hover" content="0f0f0f"/>
+	<meta name="color:verse muse tabs active" content="#0f0f0f"/>
+	<meta name="color:buttons" content="#d2d2d2"/>
+	<meta name="color:buttons background" content="#141414"/>
+	
+  
+<!-- image variables (this is for the image uploads) -->  
+
+	<meta name="image:sideimg" content="https://i.imgur.com/CNF08Fd.png"/>
+
+    
+<!-- text variables -- where you will put in the text for certain aspects of your theme -->
+
+<meta name="text:name" content="paris" /> <!-- this is for your url, character's name or a short title -->
+<meta name="text:sidebox" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. <br /><br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.<br /><br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis." />
+
+
+<!-- this is where you can choose what google fonts you want to use -->
+
+<link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'> 
+
+    
+<style type="text/css">
+
+@font-face {
+	font-family:'onelove';
+	src:url('https://static.tumblr.com/uopakca/76dq4ct45/onelove.otf');
+	}
+
+
+/* tabbed popup styling */
+
+ul#poptabs {
+   list-style-type: none;
+   padding: 0;
+   text-align: center;
+   margin-left:0px;
+}
+
+ul#poptabs li {
+   display: inline-block;
+   background-color: transparent;
+   border: solid 1px #63646a;
+   padding: 5px 6px;
+   margin-bottom: 4px;
+   color: #b1b1b1;
+   cursor: pointer;
+}
+
+ul#poptabs li:hover {
+   background-color: transparent;
+}
+
+ul#poptabs li.active {
+   background-color: {color:popup tabs active};
+}
+
+ul#poptab {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+ul#poptab li {
+   display: none;
+}
+
+ul#poptab li.active {
+   display: block;
+}
+
+
+/* this is for the tumblr controls */
+
+iframe#tumblr_controls {
+right:2px !important;
+opacity:0.4;
+position: fixed !important;
+filter:alpha(opacity=30);
+-webkit-transition: all 0.7s ease;
+-moz-transition: all 0.7s ease;
+-o-transition: all 0.7s ease;
+}
+iframe#tumblr_controls:hover{
+opacity:0.9;
+position: fixed !important;
+filter:alpha(opacity=80);
+-webkit-transition: all 0.7s ease;
+-moz-transition: all 0.7s ease;
+-o-transition: all 0.7s ease;
+}
+
+
+/* this changes the tooltip when you hover over a link */
+
+#s-m-t-tooltip {
+max-width:400px;
+padding:5px;
+margin:10px 0px 0px 10px;
+background-color:#373737; 
+font-family:'gibson', sans-serif;
+font-size:9px;
+letter-spacing:1px;
+font-style:none;
+text-transform:uppercase;
+padding-bottom:3px;
+color:#fff;
+border: 4px double #d7d7d7;
+z-index:999999999999999999999999999999999999;
+}
+
+
+
+
+/* scrollbars code */
+
+::-webkit-scrollbar-thumb:vertical {
+	background-color:transparent;
+	height:0px;
+	}
+
+::-webkit-scrollbar-thumb:horizontal {
+	background-color:transparent;
+	height:0px;
+	}
+
+::-webkit-scrollbar {
+	background-color:transparent;
+	height:0px;
+	width:0px;
+	}
+
+/* headings */
+
+h1 {
+	font-size:25px;
+	text-align:right;
+	margin-top:0px;
+}
+
+h2 {
+	font-size:25px;
+	text-align:right;
+	margin-top:-10px;
+}
+
+h3 {
+	font-size:13px;
+	line-height:15px;
+	text-transform:lowercase;
+	text-align:center;
+	font-weight:normal;
+	letter-spacing:0px;
+	color:#fff;
+	background-color: transparent;
+	border-top: solid 1px #63646a;
+	border-bottom: dashed 1px #63646a;
+	width:225px;
+	display: inline-block;
+	padding: 5px 15px;
+	margin-bottom: 1px;
+	margin-left:0px;
+	margin-top:0px;
+}
+
+h4 {
+	color:#fff;
+	font-family: 'onelove', sans-serif;
+   font-size:70px;
+	text-transform:lowercase;
+	font-weight:normal;
+	text-align:center;
+	margin-top:-10px;
+	margin-bottom:-15px;
+}
+
+ul{
+    list-style-type:square;
+}
+
+/* general style */
+
+body {
+	background-color: {color:background};
+	font-family:'gibson', sans-serif;
+	font-size:12px;
+	color:{color:text};
+	background-position:top left;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+a {
+	text-decoration:none;
+	color:{color:links};
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+}
+
+a:hover {
+	color:{color:links hover};
+}
+
+
+b,strong {
+	color:{color:bold};
+	text-transform:uppercase;
+	font-size:15px;
+}
+
+b2 {
+	color:{color:bold};
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:12px;
+}
+
+i,em {
+	color:{color:italics};
+	font-family: 'Covered By Your Grace', cursive;
+	font-size:19px;
+	line-height:90%;
+}
+
+sup, small, sub { 
+  font-size:12px;
+  }
+
+blockquote {
+	border-left:1px dashed {color:blockquote};
+	padding-left:10px;
+   padding-right:5px;
+	margin:5px 5px 5px 10px;
+   line-height:auto;
+}
+
+blockquote img {
+	max-width:100%;
+	height:auto;
+}
+
+p{
+    margin-bottom:10px;
+}
+
+img {
+	border:none;	
+	max-width:100%;
+	height:auto;
+}
+
+.caption img {
+   max-width:100%;
+   height:auto;
+   }
+ 
+.posts img {
+   max-width:100%;
+   }
+
+.photoset {
+	max-width:100%;
+}
+
+
+/* tabbed content coding */
+
+.tabcontent {
+	 position:absolute;    
+    width:510px;
+    margin-left:10px;
+    margin-top:0px;
+    overflow:scroll;
+    overflow-x:hidden;
+    height:600px;
+    text-transform:lowercase;
+    background:transparent;
+	 padding-bottom:10px;
+    }
+
+/* tabbed content coding ends here */	
+ 
+
+
+/*post style */
+
+#container {			/*this will contain the posts so they aren't left justified*/
+	position:absolute;
+	left:100px;
+	height:600px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	width:530px;
+	top:100px;
+	background:#232323e6; /* only change the first six numbers. the last two are the transparency */
+	padding-bottom:10px;
+	border-top:1px dashed #a0a0a0;
+	border-left:1px dashed #a0a0a0;
+	border-bottom:1px solid #a0a0a0;
+	border-right:1px solid #a0a0a0;
+}
+
+.posts {
+	width:500px;
+	background-color:#6e6e6e40; /* only change the first six numbers. the last two are the transparency */
+	padding:5px;
+	margin-bottom:30px;
+}
+
+.postswrap {
+	padding:10px;
+	width:560px;
+}
+
+.permalinks {
+	padding:5px;
+	background-color:#282828bf; /* only change the first six numbers. the last two are the transparency */
+	height:12px;
+	border-top:1px solid #5a5a5a;
+	border-bottom:1px dashed #5a5a5a;
+	margin-top:15px;
+}
+
+.permalinks a {
+	text-decoration:none;
+	font-size:9px;
+	color:{color:permalinks};
+}
+
+.permalinks a:hover {
+	color:{color:permalinks hover};
+}
+
+.date {
+	float:left;
+}
+
+.date .fa-bookmark { 
+	color:#aaaaaa; 
+	} 
+
+.reblogs {
+	float:right;
+}
+
+.pinned { 
+	font-weight:bold; 
+   font-size:10px;
+   text-align:center;
+   width:400px;
+}
+
+.pinned a { 
+	text-transform:uppercase!important; 
+	}
+.pinned .fa-thumbtack { 
+	margin-right:7px; 
+	font-size:11px; 
+	} 
+	
+
+/* tag styling */
+
+.tags {
+	text-align:center;
+	margin-top:5px;
+}
+
+.tags a {
+	text-decoration:none;
+	font-size:9px;
+	text-transform:uppercase;
+	color:{color:tags};
+}
+
+.tags a:hover {
+	color:{color:tags hover};
+}
+
+/*sidebar styling */
+
+#name {
+	width:200px;
+	color:{color:name};
+	font-family: 'onelove', sans-serif;
+   font-size:80px;
+	text-transform:lowercase;
+	text-align:right;
+	margin-bottom:-8px;
+	margin-left:80px;
+}
+
+#sidebar {
+	position:fixed;
+	left:700px;
+	top:100px;
+	height:400px;
+	width:350px;
+	background:{color:background};
+	background-position:top left;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	opacity:0.2;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+}
+
+#sidebar:hover {
+	opacity:1;
+}
+
+#sideimg img {
+	width:130px;
+   height:300px;
+   margin-left:754px;
+   margin-top:0px;
+   padding-bottom:0px;
+	float:right;
+	url('{image:sideimg}');
+}
+
+#sidebox {
+	font-size:10px;
+	color:{color:sidebox};
+	text-align:justify;
+	padding:0 8px;
+	height:280px;
+	width:120px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	margin-bottom:5px;
+	margin-top:2px;
+	margin-left:-7px;
+	display:inline;
+	float:left;
+}
+
+/* links styling */
+
+#links {
+	font-size:12px;
+	padding:5px;
+	text-align:right;
+	margin-left:-42px;
+	margin-top:-32px;
+	width:150px;
+}
+
+#links a {
+	display:inline-block;
+	color:{color:links};
+	padding-left:10px;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+}
+
+#links a:hover {
+	color:{color:links hover};
+	letter-spacing:1px;
+}
+
+
+/*pagination styling */
+
+#pagination {
+	position:fixed;
+	top:495px;
+	left:920px;
+	text-transform:uppercase;
+}
+
+#pagination a {
+	color:{color:pagination};
+	font-size:12px;
+	-webkit-transition: all 0.7s ease;
+	-moz-transition: all 0.7s ease;
+	-o-transition: all 0.7s ease;
+}
+
+#pagination a:hover{
+	color:{color:pagination hover};
+}
+
+/* asks styling */
+
+.asker {
+   font-size:15px;
+   font-style: italic;
+   text-align:right;
+   margin-bottom:5px;
+   padding-bottom:3px;
+}
+
+.question {
+   font-style: italic;
+   padding-left:10px;
+   padding-right:50px;
+   padding-top:10px;
+   padding-bottom:10px;
+   border-left:1px dashed #000;
+   background-color:#282828bf; /* only change the first six numbers. the last two are the transparency */
+}
+
+
+iframe#ask_form { 
+		width: 485px;
+      min-height: 220px; 
+      }
+      
+iframe#submit_form { 
+		width: 485px;
+      min-height: 220px; 
+      }
+      
+
+/* quotes stlying */
+
+.quote {
+   font-size:13px;
+   letter-spacing:1px;
+   text-align:center;
+   border-left:1px dashed #000;
+   margin-bottom:5px;
+   padding-left:10px;
+   padding-right:50px;
+   padding-top:10px;
+   padding-bottom:10px;
+   background-color:#282828bf; /* only change the first six numbers. the last two are the transparency */
+}
+
+.quotesource {
+   font-size:10px;
+   letter-spacing:1px;
+   text-align:center;
+   margin-bottom:5px;
+}
+
+
+/* tumblr audio code */
+    
+.playerbuttonbg {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    padding: 10px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    opacity: .4;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    transition: opacity .7s ease-in-out;
+    -moz-transition: opacity .7s ease-in-out;
+    -webkit-transition: opacity .7s ease-in-out;
+    }
+           
+    .playerbuttonbg:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    }
+   
+    .newplayerbutton {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    overflow: hidden;
+    }
+   
+    .playerbuttonhug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+       
+    .tumblr_audio_player {
+    height: 90px;
+    width: 270px;
+    -moz-transform: scale(0.60, 0.60);
+    -webkit-transform: scale(0.60, 0.60);
+    -o-transform: scale(0.60, 0.60);
+    -ms-transform: scale(0.60, 0.60);
+    transform: scale(0.60, 0.60);
+    -moz-transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    }
+ 
+    .audioimgwrapper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 79px;
+    height: 79px;
+    }
+           
+    .audioimgwrapper img {
+    width: 100%;
+    height: auto;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;                
+    }
+   
+    .trackdetails {
+    width: auto;
+    line-height:14px;
+    border: 0px solid black;
+    display:inline-block;
+    margin-left: 90px;
+    padding-top:20px;
+    min-height:70px;
+    }
+   
+    .audiowrapper {
+    position: relative;
+    display:inline-block;
+    }
+    
+/* tumblr audio code ends here */
+
+/* IMESSAGE CHAT POST */
+.answer span,.convo li{margin:0 0 5px;border-radius:1em;padding:.5em 10px;max-width:75%;clear:both;position:relative}.answer .them,.user_1,.user_3,.user_5,.user_7,.user_9,.user_11{float:left;background:#e5e5ea;color:#000;left:3px}.me::after,.user_1::after,.user_3::after,.user_5::after,.user_7::after,.user_9::after,.user_11::after{content:"";position:absolute;left:-.5em;bottom:0;width:.5em;height:1em;border-right:.5em solid #e5e5ea;border-bottom-right-radius:1em .5em}.answer .me,.user_2,.user_4,.user_6,.user_8,.user_10,.user_12{right:3px;float:right;background-color:#e8f3f9;color:#000}.them::after,.user_2::after,.user_4::after,.user_6::after,.user_8::after,.user_10::after,.user_12::after{content:"";position:absolute;right:-.5em;bottom:0;width:.5em;height:1em;border-left:.5em solid #e8f3f9;border-bottom-left-radius:1em .5em}.me p,.answer,.asked span{padding:0;margin:0}.answer{overflow:hidden}
+        .asked p {
+            text-align: left;
+            margin: 0 0px 10px 0px;
+            padding: 0;
+            color: #666666;
+            font-family: 'Inconsolata', Inconsolata;
+            font-size: 12px;
+            line-height: 0px;
+        }
+        .footerright .viasrc {
+            float: left;
+        }
+        .asked a {
+            margin:0;padding:0;
+        }
+.user_4{background-color:#55caff;color:#fff}.user_4::after{border-color:#55caff}.user_6{background-color:#60f246;color:#fff}.user_6::after{border-color:#60f246}.user_5{background-color:#9ff3fc;color:#000}.user_5::after{border-color:#9ff3fc}.user_3{background-color:#25c413;color:#fff}.user_3::after{border-color:#25c413}.user_7{background-color:#9b9b9b;color:#fff}.user_7::after{border-color:#9b9b9b}.user_8{background-color:#0d9321;color:#fff}.user_8::after{border-color:#0d9321}.user_9{background-color:#606060;color:#fff}.user_9::after{border-color:#606060}
+        .convo {
+            overflow: hidden;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+/* popup styling */
+
+.popup_block{
+    display:none;
+    background:{color:popup background};
+    color:{color:popup text}; /* font colour for the popup */
+    padding:20px;
+    border:0px solid #a2a2a2;  /* if you want a solid white pop-up, delete this */
+    float:left;
+    position:fixed;
+    top:426px;
+    left:736px;
+    width:490px; 
+	 height:570px; 
+	 overflow-y:scroll; 
+	 overflow-x:hidden;
+    z-index: 99999;
+    -webkit-box-shadow: 0px 0px 0px #000; /* delete for solid white */
+    -moz-box-shadow: 0px 0px 0px #000; /* delete for solid white */
+    box-shadow: 0px 0px 0px #000; /* delete for solid white */
+}
+ 
+*html #fade {position: absolute;}
+*html .popup_block {position: absolute;}
+#fade {
+    display:none;
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:9999;
+    background:#000; /* change to #fff for solid white */
+    opacity:0; /* change to opacity:1; */
+}
+
+/* end of styling */
+
+
+
+/* tabbed page code */
+
+#headernav {
+    left:50%;
+    top:50%;
+    overflow:scroll;
+    text-align:justify;
+    color:#eeeeee;
+    font-size:12px;
+}
+
+ul#tabs {
+   list-style-type: none;
+   padding: 0;
+   text-align: center;
+   margin-left:3px;
+}
+
+ul#tabs li {
+   display: inline-block;
+   background-color: transparent;
+   border: solid 1px #6a6a6a;
+   padding: 5px 15px;
+   margin-bottom: 4px;
+   margin-left:2px;
+   color: {color:verse muse tabs};
+   cursor: pointer;
+}
+
+ul#tabs li:hover {
+   background-color: {color:verse muse tabs hover};
+}
+
+ul#tabs li.active {
+   background-color: {color:verse muse tabs active};
+   display: inline-block;
+}
+
+ul#tab {
+   list-style-type: none;
+   margin-top: 10px;
+   padding: 0;
+}
+
+ul#tab li {
+   display: none;
+}
+
+ul#tab li.active {
+   display: block;
+}
+ 
+#verse {
+   height:100px;
+	background-color: transparent;
+	padding-bottom:1px;
+	padding-top:2px;
+   margin-right:4px;
+	overflow:auto;
+   }
+
+#left img {
+   float:left;
+	margin-right:8px;
+	margin-left:1px;
+	width:50px;
+	height:75px;
+	border:1px dashed #a8a8a8;
+   }
+   
+#right img {
+  float:right;
+  margin-right:1px;
+  margin-left:8px;
+  width:50px;
+  height:75px;
+  border:1px dashed #a8a8a8;
+   }
+   
+ /* tabbed muse/verse tab */
+ 
+ /* tabbed page code */
+
+#headernav {
+    left:50%;
+    top:50%;
+    overflow:scroll;
+    text-align:justify;
+    color:#eeeeee;
+    font-size:12px;
+}
+
+ul#mvtabs {
+   list-style-type: none;
+   padding: 0;
+   text-align: center;
+   margin-left:3px;
+}
+
+ul#mvtabs li {
+   display: inline-block;
+   background-color: transparent;
+   border: solid 1px #6a6a6a;
+   padding: 5px 15px;
+   margin-bottom: 4px;
+   margin-left:2px;
+   color: {color:verse muse tabs};
+   cursor: pointer;
+}
+
+ul#mvtabs li:hover {
+   background-color: {color:verse muse tabs hover};
+}
+
+ul#mvtabs li.active {
+   background-color: {color:verse muse tabs active};
+   display: inline-block;
+}
+
+ul#mvtab {
+   list-style-type: none;
+   margin-top: 10px;
+   padding: 0;
+}
+
+ul#mvtab li {
+   display: none;
+}
+
+ul#mvtab li.active {
+   display: block;
+}
+ 
+#verse {
+   height:100px;
+	background-color: transparent;
+	padding-bottom:1px;
+	padding-top:2px;
+   margin-right:4px;
+	overflow:auto;
+   }
+
+#left img {
+   float:left;
+	margin-right:8px;
+	margin-left:1px;
+	width:50px;
+	height:75px;
+	border:1px dashed #a8a8a8;
+   }
+   
+#right img {
+  float:right;
+  margin-right:1px;
+  margin-left:8px;
+  width:50px;
+  height:75px;
+  border:1px dashed #a8a8a8;
+   }
+   
+   
+/* navigation tab in popup */
+
+.button {
+  display:inline-block;
+  text-align:center;
+  width:90px;
+  margin:4px;
+  padding:2px;
+  background-color:{color:buttons background};
+  color:{color:buttons};
+  border-top: 1px solid #ddd;
+  border-bottom: 1px dashed #ddd;
+  border-radius:2px;
+	}
+
+.button:hover {
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px solid #ddd;
+	}
+	
+
+/* tab links coding */
+
+   /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+        
+                
+    }
+    
+ 
+    .tab-links li {
+        margin-left:1px;
+        padding:0px;
+        display:inline-block;
+        list-style:none;
+        text-transform:uppercase;
+    }
+ 
+        .tab-links a {
+            display:inline-block;
+				color:{color:links};
+				padding-left:10px;
+				-webkit-transition: all 0.7s ease;
+				-moz-transition: all 0.7s ease;
+				-o-transition: all 0.7s ease;
+        }
+        
+      .tab-links a:hover {
+      	color:{color:links hover};
+			letter-spacing:1px;
+      }
+
+/* end of tab links coding */
+
+/* tab content -- best not to touch this either */
+
+  .tab-content {
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+
+/* end of tab content coding */	
+
+
+/* this is the credit coding. DO NOT REMOVE */
+    
+   #credit {
+    font-size:9px;
+    font-family:cambria;
+    font-style:italic;
+    letter-spacing:1px;
+    -moz-transition-duration:0.5s;
+    -webkit-transition-duration:0.5s;
+    -o-transition-duration:0.5s;
+    }
+ 
+#credit a {
+    background-color:transparent;
+    padding:5px;
+    position:fixed;
+    right:15px;
+    bottom:10px
+    }  
+ 
+#credit a:hover {
+    background-color:transparent;
+    }    
+    
+/* credit coding ends here */
+
+
+/* Making IE6 Understand Fixed Positioning */
+
+*html #fade {
+ position: absolute;
+}
+*html .popup_block {
+ position: absolute;
+}
+    {CustomCSS}
+    
+  
+pre {
+   white-space: pre-wrap;      
+   white-space: -moz-pre-wrap;
+   white-space: -pre-wrap;    
+   white-space: -o-pre-wrap;  
+   word-wrap: break-word;
+   }   
+
+</style></head>
+    
+<body>
+
+<div id="sidebar"> 
+
+<div id="name">{text:name}</div>
+
+<div id="sidebox">{text:sidebox}</div>
+
+<div id="sideimage"><img src="{image:sideimg}"></div>
+
+<div id="links">
+<div class="tabs">
+<ul class="tab-links">
+<li class="active"><a href="/" title="refresh"><span class="fas fa-cogs" style="font-size:110%"></span></a></li>
+<li><a href="#tab2" title="questions?">01.</a></li>
+<li><a href="#tab3" title="navigation">02.</a></li>
+</div>
+
+</div> 
+
+<div id="pagination">
+{block:Pagination} 
+{block:PreviousPage}<a href="{PreviousPage}"><span class="fas fa-arrow-left" style="font-size:100%"></span></a>{/block:PreviousPage} &nbsp;page&nbsp; {block:NextPage}<a href="{NextPage}"><span class="fas fa-arrow-right" style="font-size:100%"></b></span></a>
+{/block:NextPage}
+{/block:Pagination}
+</div>
+
+</div> 
+
+
+<div id="container">
+
+<!-- tabs -->
+<div class="tabs">
+
+<!--  TAB 1  -->
+<div id="tab1" class="tab active">
+<div class="tab-content">
+
+{block:Posts}
+{block:NoRebloggedFrom}
+{block:RebloggedFrom}
+{ReblogParentName}
+{/block:RebloggedFrom}
+{/block:NoRebloggedFrom}
+
+<div class="postswrap">
+<div class="posts"> 
+
+{block:Text}<h1>{block:Title}{Title}{/block:Title}</h1>{Body}{/block:Text}
+
+{block:Photo}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{block:Caption}{Caption}{/block:Caption}{/block:Photo}
+
+{block:Panorama}{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>{LinkCloseTag}{block:Caption}{Caption}{/block:Caption}{/block:Panorama}
+
+{block:Photoset}{Photoset-500}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+
+{block:Quote}<div class="quote">{Quote}</div>{block:Source}<div class="quotesource">&mdash; {Source}</div>{/block:Source}{/block:Quote}
+
+{block:Link}<h1><a href="{URL}" class="link" {Target}>{Name}</a></h1>{block:Description}{Description}{/block:Description}{/block:Link}
+
+{block:Chat}
+          {block:Title}
+            <h1>{Title}</h1>{/block:Title}<br>
+<ul class="convo">{block:Lines}<li class="line_{Alt} user_{UserNumber}">{block:Label}<span class="label"><strong>{Label}</strong></span>{/block:Label}
+{Line}</li>{/block:Lines}</ul>
+            {/block:Chat}
+            
+                                    
+{block:Video}{Video-500}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+
+<!--AUDIO POST-->
+{block:Audio}
+{block:AudioPlayer}
+<div class="audiowrapper">
+{block:AlbumArt}
+<div class="audioimgwrapper"><img src="{AlbumArtURL}"></div>
+{/block:AlbumArt}
+ 
+<div class="playerbuttonbg">
+<div class="newplayerbutton">
+<div class="playerbuttonhug">
+{AudioPlayerWhite}
+</div></div></div>
+<div class="trackdetails">
+{block:TrackName}<b>Track:</b> {TrackName} <br/>{/block:TrackName}
+{block:Artist}<b>Artist:</b> {Artist} <br/>{/block:Artist}
+{block:Album}<b>Album:</b> {Album} <br/>{/block:Album}
+</div></div>
+{/block:AudioPlayer}
+<br /><br />
+{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+{/block:Audio}
+
+{block:Answer}
+<div class="asker">{Asker} left a message</div>
+<div class="question">{Question}</div>
+{Answer}
+{/block:Answer}
+
+<div class="permalinks"> 
+<div class="date"><span class="fas fa-bookmark" style="font-size:75%"></span> &nbsp; <a href="{PERMALINK}" title="{ShortDayOfWeek} {ShortMonth}.{MonthNumberWithZero}.{Year}">{ShortDayOfWeek} {ShortMonth}.{MonthNumberWithZero}.{Year} </a> &nbsp;|&nbsp; <a href="{PERMALINK}" title="{NoteCountWithLabel}"><span style="color:red; font-size:105%">&#10084;</span>&nbsp;{NoteCount}</a></div>
+<div class="reblogs">{block:RebloggedFrom}
+<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="fas fa-share-alt"></span></a> &nbsp;{/block:RebloggedFrom}{block:ContentSource} <a title="source: {SourceTitle}" href="{SourceURL}"><span class="fas fa-cog"></span></a>{/block:ContentSource} &nbsp;<a href="{ReblogURL}" title="reblog this post"><span class="fas fa-redo"></span></a>
+</div>
+{block:HomePage}{block:PinnedPostLabel}<div class="pinned"><a href="{Permalink}"><span class="fas fa-thumbtack"></span>{PinnedPostLabel}</a></div>{/block:PinnedPostLabel}{/block:HomePage}
+</div>
+
+{block:PermalinkPage}
+<div class="tags">
+<b2>filed under:</b2>&nbsp;
+{block:HasTags}{block:Tags}&nbsp;<a title="{Tag}" href="{TAGURL}">{TAG}</a>&nbsp; &nbsp; {/block:Tags}{/block:HasTags}
+</div>
+{/block:PermalinkPage}
+
+</div>
+
+<div class="postnote">
+{block:PostNotes}{PostNotes-16}{/block:PostNotes}
+</div>
+
+</div>
+{/block:Posts}
+</div>
+
+{block:ContentSource}
+<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"
+width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+{/block:ContentSource}
+</div>
+
+<!-- -------------------------- TAB 2 -------------------------- -->
+
+<div id="tab2" class="tab">
+    <div class="tabcontent">
+       <div id="headernav">
+<h4>questions and answers</h4>
+<ul id="tabs">
+     <li class="active">questions</li>
+     &nbsp;
+     <li>submissions</li>
+</ul>  
+
+<ul id="tab">
+<li class="active">
+<iframe id="ask_form" style="background-color: transparent; overflow: hidden;" src="https://www.tumblr.com/ask_form/YOURURLHERE.tumblr.com" frameborder="0" scrolling="no" width="485" height="300"></iframe>
+</li>
+
+<li>
+<iframe id="submit_form" style="background-color: transparent; overflow: hidden;" src="https://www.tumblr.com/submit_form/YOURURLHERE.tumblr.com" frameborder="0" scrolling="no" width="485" height="300"></iframe>
+</li>
+    </div>
+    </div>
+</div>
+        
+        
+<!-- -------------------------- TAB 3 -------------------------- -->
+
+<div id="tab3" class="tab">
+    <div class="tabcontent">
+    <div id="headernav">
+        <h4>site map</h4>
+        <ul id="tabs">
+     <li class="active" style="width:75px">guidelines</li>
+		&nbsp;
+     <li style="width:75px">biography</li>
+     &nbsp;
+     <li style="width:75px">verses/muses</li>
+     &nbsp;
+     <li style="width:75px">navigation</li>
+</ul>  
+
+<ul id="tab">
+<li class="active">
+<h4>guidelines</h4>
+<p><center><h3>section one&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.
+<p>
+<br />
+<p><center><h3>section two&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.
+<p>
+<br />
+<p><center><h3>section three&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.
+<p>
+<br />
+<p><center><h3>section four&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.
+
+<p>
+<br />
+<p><center><h3>section five&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.
+
+</li>
+
+<li>
+<h4>biography</h4>
+<p><center><h3>section six&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
+<p>
+<br />
+
+<p><center><h3>section seven&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
+<p>
+<br />
+
+<p><center><h3>section eight&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
+<p>
+<br />
+
+<p><center><h3>section nine&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
+<p>
+<br />
+
+<p><center><h3>section ten&nbsp;&nbsp;</h3></center>
+
+<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
+<p>
+<br />
+
+</li>
+
+<li>
+<h4>verses/muses</h4>
+<p>
+<ul id="mvtabs">
+    <li style="width:85px">candon</li>&nbsp; 
+    <li style="width:85px">fandom</li>&nbsp; 
+    <li style="width:85px">from the screen</li>&nbsp;
+    <li style="width:85px">from the page</li>&nbsp; 
+    </ul>
+<br />
+
+<ul id="mvtab">
+<li class="active">
+<center><h3>verse one</h3></center>
+<p>
+<div id="verse">
+<div id="left"><img src="https://i.imgur.com/0NhNtQ7.png"></div>
+<a href="/"><b>verse one</b></a> &mdash; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. 
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+</div>
+<p>
+<center><h3>verse two</h3></center>
+<p>
+<div id="verse">
+<div id="right"><img src="https://i.imgur.com/0NhNtQ7.png"></div>
+<a href="/"><b>verse two</b></a> &mdash; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. 
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+</div>
+
+
+</li>
+
+<li>
+<center><h3>verse three</h3></center>
+<p>
+<div id="verse">
+<div id="left"><img src="https://i.imgur.com/0NhNtQ7.png"></div>
+<a href="/"><b>verse three</b></a> &mdash; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. 
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+</div>
+<p>
+<center><h3>verse four</h3></center>
+<p>
+<div id="verse">
+<div id="right"><img src="https://i.imgur.com/0NhNtQ7.png"></div>
+<a href="/"><b>verse four</b></a> &mdash; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. 
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+</div>
+
+</li>
+
+<li>
+<center><h3>muse one</h3></center>
+<p>
+<div id="verse">
+<div id="left"><img src="https://i.imgur.com/0NhNtQ7.png"></div>
+<a href="/"><b>muse one</b></a> &mdash; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. 
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+</div>
+<p>
+<center><h3>muse two</h3></center>
+<p>
+<div id="verse">
+<div id="right"><img src="https://i.imgur.com/0NhNtQ7.png"></div>
+<a href="/"><b>muse two</b></a> &mdash; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. 
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+</div>
+
+</li>
+
+<li>
+<center><h3>muse three</h3></center>
+<p>
+<div id="verse">
+<div id="left"><img src="https://i.imgur.com/0NhNtQ7.png"></div>
+<a href="/"><b>muse three</b></a> &mdash; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. 
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+</div>
+<p>
+<center><h3>muse four</h3></center>
+<p>
+<div id="verse">
+<div id="right"><img src="https://i.imgur.com/0NhNtQ7.png"></div>
+<a href="/"><b>muse four</b></a> &mdash; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis. 
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+</div>
+
+</li>
+</ul> 
+</li>
+
+<li>
+<h4>navigation</h4>
+<center><p><h3>section one</h3>
+<p>
+<a href="/" class="button">one</a> 
+&nbsp;
+<a href="/" class="button">two</a>
+&nbsp;
+<a href="/" class="button">three</a>
+<br />
+<a href="/" class="button">four</a> 
+&nbsp;
+<a href="/" class="button">five</a>
+&nbsp;
+<a href="/" class="button">six</a>
+<p>
+<h3>section two</h3>
+<p>
+<a href="/" class="button">one</a> 
+&nbsp;
+<a href="/" class="button">two</a>
+&nbsp;
+<a href="/" class="button">three</a>
+<br />
+<a href="/" class="button">four</a> 
+&nbsp;
+<a href="/" class="button">five</a>
+&nbsp;
+<a href="/" class="button">six</a>
+<p> 
+<h3>section three</h3>
+<p>
+<a href="/" class="button">one</a> 
+&nbsp;
+<a href="/" class="button">two</a>
+&nbsp;
+<a href="/" class="button">three</a>
+<br />
+<a href="/" class="button">four</a> 
+&nbsp;
+<a href="/" class="button">five</a>
+&nbsp;
+<a href="/" class="button">six</a>
+</center>
+</li>
+
+    </div></div>
+</div>   
+    
+ 
+<!-- END OF TABS -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="credit"> 
+<a href="https://houseofsol.tumblr.com" title="theme by houseofsol"><img src="https://68.media.tumblr.com/e5f4ca3f38bdf7a73c37efc9b8fd4996/tumblr_inline_oj2mweKepP1scj6vj_500.png"></a>
+</div>
+
+
+<!-- tabs/all in one script. do not delete -->
+ 
+<script>
+$(document).ready(function() {
+    $('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = $(this).attr('href');
+ 
+        // Show/Hide Tabs
+        $('.tabs ' + currentAttrValue).fadeIn(600).siblings().hide();
+ 
+        // Change/remove current tab to active
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+});
+</script>
+ 
+<script>
+$(document).ready(function() {
+  $('#filterOptions li a').click(function() {
+    // fetch the class of the clicked item
+    var ourClass = $(this).attr('class');
+ 
+    // reset the active class on all the buttons
+    $('#filterOptions li').removeClass('active');
+    // update the active state on our clicked button
+    $(this).parent().addClass('active');
+ 
+    if(ourClass == 'all') {
+      // show all our items
+      $('#ourHolder').children('div.item').show();
+    }
+    else {
+      // hide all elements that don't share ourClass
+      $('#ourHolder').children('div:not(.' + ourClass + ')').hide();
+      // show all elements that do share ourClass
+      $('#ourHolder').children('div.' + ourClass).show();
+    }
+    return false;
+  });
+});
+</script>
+
+<!-- end all in one script coding -->
+
+
+</body>
+
+
+
+
+    
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</html>
