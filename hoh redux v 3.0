@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
     <head>
         <title>{Title}</title>
         <link rel="shortcut icon" href="{Favicon}">
@@ -258,12 +257,15 @@ filter:alpha(opacity=80);
 -o-transition: all 0.7s ease;
 }
 
+
 /* this is what changes the colour when you highlight */
 
 ::selection {
 background: #0a0a0a;
 color: #556677;
 }
+
+
 
 /* this changes the tooltip when you hover over a link */
 
@@ -425,7 +427,6 @@ p{
 img {
 	border:none;	
 	max-width:100%;
-	height:auto;
 }
 
 .caption img {
@@ -572,10 +573,11 @@ img {
 	opacity:1;
 }
 
-#sideimg img {
-	max-width:200px;
-	margin-left:10px;
-	float:right;
+#sideimage img {
+	width:201px;
+	height:100px;
+	margin-left:1px;
+	float:left;
 	url('{image:sideimg}');
 }
 
@@ -598,6 +600,9 @@ img {
 	font-size:12px;
 	padding:10px;
 	text-align:right;
+	position:fixed;
+	margin-left:105px;
+	margin-top:100px;
 }
 
 #links a {
@@ -619,8 +624,8 @@ img {
 
 #pagination {
 	position:fixed;
-	top:475px;
-	left:330px;
+	top:429px;
+	left:200px;
 	text-transform:uppercase;
 }
 
