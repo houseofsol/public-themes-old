@@ -280,14 +280,6 @@ filter:alpha(opacity=80);
 }
 
 
-/* this is what changes the colour when you highlight */
-
-::selection {
-background: #0a0a0a;
-color: #556677;
-}
-
-
 /* this changes the tooltip when you hover over a link */
 
 #s-m-t-tooltip {
@@ -306,6 +298,12 @@ border: 4px double #d7d7d7;
 z-index:999999999999999999999999999999999999;
 }
 
+/* this is what changes the colour when you highlight */
+
+::selection {
+background: #0a0a0a;
+color: #556677;
+}
 
 
 
@@ -367,7 +365,7 @@ h4 {
 	text-transform:lowercase;
 	font-weight:normal;
 	text-align:center;
-	margin-top:0px;
+	margin-top:-10px;
 	margin-bottom:-15px;
 }
 
@@ -444,7 +442,6 @@ p{
 img {
 	border:none;	
 	max-width:100%;
-	height:auto;
 }
 
 .caption img {
@@ -585,7 +582,7 @@ img {
 	text-transform:lowercase;
 	text-align:right;
 	margin-bottom:-8px;
-	margin-left:80px;
+	margin-left:70px;
 }
 
 #sidebar {
@@ -608,13 +605,10 @@ img {
 	opacity:1;
 }
 
-#sideimg img {
+#sideimage img {
 	width:130px;
    height:300px;
-   margin-left:754px;
-   margin-top:0px;
-   padding-bottom:0px;
-	float:right;
+   float:left;
 	url('{image:sideimg}');
 }
 
@@ -638,11 +632,13 @@ img {
 
 #links {
 	font-size:12px;
-	padding:5px;
+	padding:10px;
 	text-align:right;
-	margin-left:-42px;
-	margin-top:-32px;
+	margin-right:900px;
+	margin-left:-40px;
+	margin-top:267px;
 	width:150px;
+	position:fixed;
 }
 
 #links a {
@@ -664,8 +660,8 @@ img {
 
 #pagination {
 	position:fixed;
-	top:495px;
-	left:920px;
+	top:485px;
+	left:890px;
 	text-transform:uppercase;
 }
 
@@ -1419,7 +1415,7 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 <h4>verses/muses</h4>
 <p>
 <ul id="mvtabs">
-    <li style="width:85px">candon</li>&nbsp; 
+    <li style="width:85px">canon</li>&nbsp; 
     <li style="width:85px">fandom</li>&nbsp; 
     <li style="width:85px">from the screen</li>&nbsp;
     <li style="width:85px">from the page</li>&nbsp; 
