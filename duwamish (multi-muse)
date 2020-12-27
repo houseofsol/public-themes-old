@@ -11,7 +11,7 @@
 
 <!--
  
-duwamish v. 1.0 by houseofsol using a tutorial by octomoosey & integrating a base code by neonbike themes
+duwamish v. 1.0 multi-muse variant by houseofsol using a tutorial by octomoosey & integrating a base code by neonbike themes
  
 please do not remove this credit and please do not use this theme for commissions or giveaways. 
 thank you.
@@ -464,7 +464,6 @@ p{
 img {
 	border:none;	
 	max-width:100%;
-	height:auto;
 }
 
 .caption img {
@@ -626,14 +625,11 @@ img {
 }
 
 
-#sideimg img {
+#sideimage img {
 	width:240px;
    height:390px;
-   margin-left:774;
-   margin-top:1px;
-   padding-bottom:0px;
-	float:right;
-	url('{image:sideimg}');
+   float:right;
+   url('{image:sideimg}');
 }
 
 #sidebox {
@@ -655,12 +651,13 @@ img {
 /* links styling */
 
 #links {
+	width:200px; 	
 	font-size:12px;
 	padding:5px;
 	text-align:right;
 	margin-left:-63px;
-	margin-top:2px;
-	width:200px; /* if you use the biography tab change this to 225px */
+	margin-top:393px;
+	position:fixed;
 }
 
 #links a {
@@ -1489,48 +1486,8 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
    </div></div>
 </div>   
  
-<!-- -------------------------- TAB 4a (if you need a biography use this and readjust the tab id numbers here & in the links menu. also you'll need to adjust the links width in the css) 
-<div id="tab4" class="tab">
-    <div class="tabcontent">
-    <div id="headernav">
-        <h4>biography</h4>
-        
 
-<p><center><h3>section one&nbsp;&nbsp;</h3></center>
-
-<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
-<p>
-<br />
-
-<p><center><h3>section two&nbsp;&nbsp;</h3></center>
-
-<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
-<p>
-<br />
-
-<p><center><h3>section three&nbsp;&nbsp;</h3></center>
-
-<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
-<p>
-<br />
-
-<p><center><h3>section four&nbsp;&nbsp;</h3></center>
-
-<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
-<p>
-<br />
-
-<p><center><h3>section five&nbsp;&nbsp;</h3></center>
-
-<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna. maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. aenean id massa ut lacus molestie porta. curabitur sit amet quam id libero suscipit venenatis.     
-<p>
-<br />
-
-    </div></div></div>
-
--------------------------- --> 
- 
-<!-- -------------------------- TAB 4b -------------------------- -->
+<!-- -------------------------- TAB 4 -------------------------- -->
 
 <div id="tab4" class="tab">
     <div class="tabcontent">
@@ -2003,7 +1960,8 @@ $(document).ready(function() {
 <a title="connection six"><img src="https://i.imgur.com/iedNFZ5.png"></a>&nbsp;
 </center>
 </div>
-</li>
+</li
+>
     
 </div>
 
