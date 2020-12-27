@@ -628,6 +628,7 @@ img {
 #sideimage img {
 	width:240px;
    height:390px;
+   margin-right:2px;
    float:right;
    url('{image:sideimg}');
 }
