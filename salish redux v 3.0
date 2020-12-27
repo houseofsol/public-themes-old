@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
+    <head>
         <title>{Title}</title>
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -428,7 +428,6 @@ p{
 img {
 	border:none;	
 	max-width:100%;
-	height:auto;
 }
 
 .caption img {
@@ -553,7 +552,7 @@ img {
 	text-transform:lowercase;
 	text-align:right;
 	margin-bottom:-8px;
-	margin-left:80px;
+	margin-left:70px;
 }
 
 #sidebar {
@@ -576,13 +575,10 @@ img {
 	opacity:1;
 }
 
-#sideimg img {
+#sideimage img {
 	width:130px;
    height:300px;
-   margin-left:754px;
-   margin-top:0px;
-   padding-bottom:0px;
-	float:right;
+   float:left;
 	url('{image:sideimg}');
 }
 
@@ -609,8 +605,9 @@ img {
 	padding:10px;
 	text-align:right;
 	margin-right:900px;
-	margin-top:-25px;
+	margin-top:280px;
 	width:100px;
+	position:fixed;
 }
 
 #links a {
@@ -632,8 +629,8 @@ img {
 
 #pagination {
 	position:fixed;
-	top:495px;
-	left:920px;
+	top:485px;
+	left:890px;
 	text-transform:uppercase;
 }
 
