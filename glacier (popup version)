@@ -1158,7 +1158,7 @@ pre {
 {/block:Answer}
 
 <div class="permalinks"> 
-<div class="date"><span class="fas fa-bookmark" style="font-size:75%"></span> &nbsp; <a href="{PERMALINK}" title="{ShortDayOfWeek} {ShortMonth}.{MonthNumberWithZero}.{Year}">{ShortDayOfWeek} {ShortMonth}.{MonthNumberWithZero}.{Year} </a> &nbsp;|&nbsp; <a href="{PERMALINK}" title="{NoteCountWithLabel}"><span style="color:red; font-size:105%">&#10084;</span>&nbsp;{NoteCount}</a></div>
+<div class="date"><span class="fas fa-bookmark" style="font-size:75%"></span> &nbsp; <a href="{PERMALINK}" title="{ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{Year}">{ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{Year} </a> &nbsp;|&nbsp; <a href="{PERMALINK}" title="{NoteCountWithLabel}"><span style="color:red; font-size:105%">&#10084;</span>&nbsp;{NoteCount}</a></div>
 <div class="reblogs">{block:RebloggedFrom}
 <a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="fas fa-share-alt"></span></a> &nbsp;{/block:RebloggedFrom}{block:ContentSource} <a title="source: {SourceTitle}" href="{SourceURL}"><span class="fas fa-cog"></span></a>{/block:ContentSource} &nbsp;<a href="{ReblogURL}" title="reblog this post"><span class="fas fa-redo"></span></a>
 </div>
