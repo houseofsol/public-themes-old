@@ -153,6 +153,8 @@ attribute:"title"
 	<meta name="color:text" content="#ffffff"/>
 	<meta name="color:links" content="#707777"/>
 	<meta name="color:links hover" content="#386182"/>
+	<meta name="color:tags" content="#707777"/>
+	<meta name="color:tags hover" content="#386182"/>
 	<meta name="color:permalinks" content="#707777"/>
 	<meta name="color:permalinks hover" content="#386182"/>
 	<meta name="color:bold" content="#556677"/>
