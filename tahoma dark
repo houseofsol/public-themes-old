@@ -226,8 +226,7 @@ attribute:"title"
 	
 
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href=“//solrainha.github.io/honeybee/honeybee.css” rel=“stylesheet”>
+<script src="https://kit.fontawesome.com/2e587cc233.js" crossorigin="anonymous"></script>
 	
 
  <!-- this is where you can choose what google fonts you want to use -->
@@ -1690,7 +1689,7 @@ pre {
 <div class="tabs">
 <ul class="tab-links">
 <li class="active">
-<a href="/" title="refresh"><span class="th th-paperclip" style="font-size:95%"></span></a></li>
+<a href="/" title="refresh"><span class="fas fa-paperclip" style="font-size:95%"></span></a></li>
 <li><a href="#tab2" title="questions?">01.</a></li>
 <li><a href="#tab3" title="guidelines">02.</a></li>
 <li><a href="#tab4" title="muses/verses">03.</a></li>
@@ -1762,12 +1761,12 @@ pre {
 <div class="toggle"> 
 <div id="info"> 
 {block:Date}
-<a href="{Permalink}" title="posted {TimeAgo} - {ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{ShortYear}"><span class="th th-cross-3-o" style="font-size:100%"></span></a>{/block:Date}
-<a href="{Permalink}" title="{NoteCountWithLabel}"><span class="th th-heart-1" style="font-size:110%"></span></a>
+<a href="{Permalink}" title="posted {TimeAgo} - {ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{ShortYear}"><span class="fas fa-times" style="font-size:100%"></span></a>{/block:Date}
+<a href="{Permalink}" title="{NoteCountWithLabel}"><span class="fas fa-heart" style="font-size:110%"></span></a>
 
 {block:RebloggedFrom}
-<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="th th-cross-3-o" style="font-size:100%"></span></a> {/block:RebloggedFrom}{block:ContentSource} 
-<a title="source: {SourceTitle}" href="{SourceURL}"><span class="th th-cross-3-o" style="font-size:100%"></span></a>{/block:ContentSource}   {/block:RebloggedFrom} <a href="#" class="toggle-trigger" title="click for tags"><span class="th th-cross-3-o" style="font-size:100%"></span></a> <a href="{ReblogURL}"target="_blank" title="reblog this post"><span class="th th-reload"></span></a> 
+<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="fas fa-times" style="font-size:100%"></span></a> {/block:RebloggedFrom}{block:ContentSource} 
+<a title="source: {SourceTitle}" href="{SourceURL}"><span class="fas fa-times" style="font-size:100%"></span></a>{/block:ContentSource}   {/block:RebloggedFrom} <a href="#" class="toggle-trigger" title="click for tags"><span class="fas fa-times" style="font-size:100%"></span></a> <a href="{ReblogURL}"target="_blank" title="reblog this post"><span class="fas fa-redo"></span></a> 
 
 </div>
 
@@ -1786,13 +1785,13 @@ pre {
 {block:PermalinkPage}
 <div id="perminfo"> 
 {block:Date}
-<a href="{Permalink}" title="posted {TimeAgo} - {ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{ShortYear}"><span class="th th-cross-3-o" style="font-size:100%"></span></a>{/block:Date}
-<a href="{Permalink}" title="{NoteCountWithLabel}"><span class="th th-heart-1" style="font-size:110%"></span></a>
+<a href="{Permalink}" title="posted {TimeAgo} - {ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{ShortYear}"><span class="fas fa-times" style="font-size:100%"></span></a>{/block:Date}
+<a href="{Permalink}" title="{NoteCountWithLabel}"><span class="fas fa-heart" style="font-size:110%"></span></a>
 
 {block:RebloggedFrom}
-<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="th th-cross-3-o" style="font-size:100%"></span></a> {/block:RebloggedFrom}{block:ContentSource} 
-<a title="source: {SourceTitle}" href="{SourceURL}"><span class="th th-cross-3-o" style="font-size:100%"></span></a>{/block:ContentSource}   {/block:RebloggedFrom}
-<a href="{ReblogURL}"target="_blank" title="reblog this post"><span class="th th-reload"></a>&nbsp; &nbsp; &nbsp;
+<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="fas fa-times" style="font-size:100%"></span></a> {/block:RebloggedFrom}{block:ContentSource} 
+<a title="source: {SourceTitle}" href="{SourceURL}"><span class="fas fa-times" style="font-size:100%"></span></a>{/block:ContentSource}   {/block:RebloggedFrom}
+<a href="{ReblogURL}"target="_blank" title="reblog this post"><span class="fas fa-redo"></a>&nbsp; &nbsp; &nbsp;
 </div>
 
 <div class="permtags">
