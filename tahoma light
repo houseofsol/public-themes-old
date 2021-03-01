@@ -1764,12 +1764,12 @@ pre {
 <div class="toggle"> 
 <div id="info"> 
 {block:Date}
-<a href="{Permalink}" title="posted {TimeAgo} - {ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{ShortYear}"><span class="th th-cross-3-o" style="font-size:100%"></span></a>{/block:Date}
-<a href="{Permalink}" title="{NoteCountWithLabel}"><span class="th th-heart-1" style="font-size:110%"></span></a>
+<a href="{Permalink}" title="posted {TimeAgo} - {ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{ShortYear}"><span class="fas fa-times" style="font-size:100%"></span></a>{/block:Date}
+<a href="{Permalink}" title="{NoteCountWithLabel}"><span class="fas fa-heart" style="font-size:110%"></span></a>
 
 {block:RebloggedFrom}
-<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="th th-cross-3-o" style="font-size:100%"></span></a> {/block:RebloggedFrom}{block:ContentSource} 
-<a title="source: {SourceTitle}" href="{SourceURL}"><span class="th th-cross-3-o" style="font-size:100%"></span></a>{/block:ContentSource}   {/block:RebloggedFrom} <a href="#" class="toggle-trigger" title="click for tags"><span class="th th-cross-3-o" style="font-size:100%"></span></a> <a href="{ReblogURL}"target="_blank" title="reblog this post"><span class="th th-reload"></span></a> 
+<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="fas fa-times" style="font-size:100%"></span></a> {/block:RebloggedFrom}{block:ContentSource} 
+<a title="source: {SourceTitle}" href="{SourceURL}"><span class="fas fa-times" style="font-size:100%"></span></a>{/block:ContentSource}   {/block:RebloggedFrom} <a href="#" class="toggle-trigger" title="click for tags"><span class="fas fa-times" style="font-size:100%"></span></a> <a href="{ReblogURL}"target="_blank" title="reblog this post"><span class="fas fa-redo"></span></a> 
 
 </div>
 
@@ -1788,13 +1788,13 @@ pre {
 {block:PermalinkPage}
 <div id="perminfo"> 
 {block:Date}
-<a href="{Permalink}" title="posted {TimeAgo} - {ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{ShortYear}"><span class="th th-cross-3-o" style="font-size:100%"></span></a>{/block:Date}
-<a href="{Permalink}" title="{NoteCountWithLabel}"><span class="th th-heart-1" style="font-size:110%"></span></a>
+<a href="{Permalink}" title="posted {TimeAgo} - {ShortDayOfWeek} {ShortMonth}.{DayOfMonthWithZero}.{ShortYear}"><span class="fas fa-times" style="font-size:100%"></span></a>{/block:Date}
+<a href="{Permalink}" title="{NoteCountWithLabel}"><span class="fas fa-heart" style="font-size:110%"></span></a>
 
 {block:RebloggedFrom}
-<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="th th-cross-3-o" style="font-size:100%"></span></a> {/block:RebloggedFrom}{block:ContentSource} 
-<a title="source: {SourceTitle}" href="{SourceURL}"><span class="th th-cross-3-o" style="font-size:100%"></span></a>{/block:ContentSource}   {/block:RebloggedFrom}
-<a href="{ReblogURL}"target="_blank" title="reblog this post"><span class="th th-reload"></a>&nbsp; &nbsp; &nbsp;
+<a title="via: {ReblogParentName}" href="{ReblogParentURL}"><span class="fas fa-times" style="font-size:100%"></span></a> {/block:RebloggedFrom}{block:ContentSource} 
+<a title="source: {SourceTitle}" href="{SourceURL}"><span class="fas fa-times" style="font-size:100%"></span></a>{/block:ContentSource}   {/block:RebloggedFrom}
+<a href="{ReblogURL}"target="_blank" title="reblog this post"><span class="fas fa-redo"></a>&nbsp; &nbsp; &nbsp;
 </div>
 
 <div class="permtags">
