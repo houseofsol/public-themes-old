@@ -228,7 +228,6 @@ attribute:"title"
 
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href=“//solrainha.github.io/honeybee/honeybee.css” rel=“stylesheet”>
 	
 
  <!-- this is where you can choose what google fonts you want to use -->
@@ -1661,7 +1660,7 @@ pre {
     
  
     </style>
-	<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">        
+	<link href=“//solrainha.github.io/honeybee/honeybee.css” rel=“stylesheet”>     
     
     </head><body>
     
@@ -1692,7 +1691,7 @@ pre {
 <div class="tabs">
 <ul class="tab-links">
 <li class="active">
-<a href="/" title="refresh"><span class="th th-paperclip" style="font-size:95%"></span></a></li>
+<a href="/" title="refresh"><span class="fas fa-paperclip" style="font-size:95%"></span></a></li>
 <li><a href="#tab2" title="questions?">01.</a></li>
 <li><a href="#tab3" title="guidelines">02.</a></li>
 <li><a href="#tab4" title="muses/verses">03.</a></li>
