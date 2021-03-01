@@ -227,7 +227,7 @@ attribute:"title"
 	
 
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/2e587cc233.js" crossorigin="anonymous"></script>
 	
 
  <!-- this is where you can choose what google fonts you want to use -->
